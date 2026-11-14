@@ -543,7 +543,7 @@ tile_map_data = PackedByteArray("AAAMAAYAAQAPAAUAAFANAAYAAQAIAA8AAAAOAAYAAQAIAA8
 tile_set = SubResource("TileSet_h4t55")
 
 [node name="Node2D" parent="Tilemaplayers" unique_id=332292609 instance=ExtResource("3_7gdj4")]
-position = Vector2(35, 233)
+position = Vector2(35, 231)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Tilemaplayers/Node2D" unique_id=429882765]
 
