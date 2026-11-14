@@ -1,17 +1,27 @@
 [gd_scene format=3 uid="uid://duwe2tngv1nck"]
 
-[ext_resource type="Script" uid="uid://qyhlbc17kv3s" path="res://character_body_2d.gd" id="1_ij6vw"]
-[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="2_ghijl"]
+[ext_resource type="Texture2D" uid="uid://051iva3uqmik" path="res://red-ball-cartoon-vector-removebg-preview.png" id="2_ij6vw"]
+
+[sub_resource type="GDScript" id="GDScript_q8ihy"]
+script/source = "extends CharacterBody2D
+
+func _physics_process(delta):
+	var input_direction = Input.get_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\")
+	velocity = input_direction * 400
+	move_and_slide()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
 size = Vector2(113, 118)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1468154598]
-script = ExtResource("1_ij6vw")
+[node name="bolita" type="CharacterBody2D" unique_id=1468154598]
+script = SubResource("GDScript_q8ihy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=338102852]
+position = Vector2(0.35899734, -0.24308014)
 rotation = 0.034906585
-texture = ExtResource("2_ghijl")
+scale = Vector2(0.30691314, 0.3077603)
+texture = ExtResource("2_ij6vw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=740069366]
 position = Vector2(0.5, 1)
