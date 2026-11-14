@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cmwdw8kgbef6b"]
+
+[ext_resource type="Script" uid="uid://qyhlbc17kv3s" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://051iva3uqmik" path="res://red-ball-cartoon-vector-removebg-preview.png" id="1_wtcfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_25806"]
+radius = 21.213203
+
+[node name="Node2D" type="Node2D" unique_id=332292609]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1821208644]
+position = Vector2(3, -1)
+scale = Vector2(0.9908131, 0.9962967)
+script = ExtResource("1_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1347375153]
+position = Vector2(579, 326)
+scale = Vector2(0.111784555, 0.111970805)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=93910997]
+position = Vector2(579, 326)
+shape = SubResource("CircleShape2D_25806")

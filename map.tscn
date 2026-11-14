@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cq8oryd20ymwh"]
+
+[ext_resource type="Texture2D" uid="uid://yt7o4xh7tuaq" path="res://TX Tileset Grass.png" id="1_wijl4"]
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://node_2d.tscn" id="2_wijl4"]
+
+[node name="Node2D" type="Node2D" unique_id=1775908148]
+
+[node name="TxTilesetGrass" type="Sprite2D" parent="." unique_id=335779697]
+position = Vector2(569, 319)
+scale = Vector2(4.4837155, 2.3744197)
+texture = ExtResource("1_wijl4")
+
+[node name="Node2D" parent="." unique_id=332292609 instance=ExtResource("2_wijl4")]
+position = Vector2(-17, -4)
