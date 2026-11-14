@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cnw0wkvnd5etf" path="res://nivel.tscn" id="1_dbkrs"]
 [ext_resource type="PackedScene" uid="uid://bm3pkkowuvywg" path="res://enemy.tscn" id="2_iicca"]
-[ext_resource type="PackedScene" uid="uid://duwe2tngv1nck" path="res://player.tscn" id="3_hbxap"]
 
 [node name="Node2D" type="Node2D" unique_id=657078144]
 
@@ -39,6 +38,3 @@ position = Vector2(431, 18)
 position = Vector2(468, 334)
 speed = 100.0
 waypoints = [NodePath("../waypoints/waypoint"), NodePath("../waypoints/waypoint2"), NodePath("../waypoints/waypoint3"), NodePath("../waypoints/waypoint4"), NodePath("../waypoints/waypoint5"), NodePath("../waypoints/waypoint6"), NodePath("../waypoints/waypoint7"), NodePath("../waypoints/waypoint8")]
-
-[node name="CharacterBody2D" parent="Level" unique_id=1120732112 instance=ExtResource("3_hbxap")]
-position = Vector2(917, 85)
