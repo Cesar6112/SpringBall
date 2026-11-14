@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://c8ixks6irxc7k"]
+
+[ext_resource type="Script" uid="uid://bcds3gmrn2tsf" path="res://menu.gd" id="1_lti8b"]
+
+[sub_resource type="GDScript" id="GDScript_vsb4k"]
+
+[node name="Menu" type="Control" unique_id=1324501932]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.2528594, 3.4279723)
+script = ExtResource("1_lti8b")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=916207679]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0005337185
+anchor_top = 0.0009003629
+anchor_right = 12.389571
+anchor_bottom = 8.783758
+offset_right = -13010.171
+offset_bottom = -5043.292
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.28043935, 0.28731874)
+theme_override_constants/margin_left = 400
+theme_override_constants/margin_right = 400
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer" unique_id=1965854895]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2" unique_id=1361797108]
+layout_mode = 2
+theme_override_font_sizes/font_size = 90
+text = "Spring Ball"
+horizontal_alignment = 1
+script = SubResource("GDScript_vsb4k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=912372042]
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1346576907]
+layout_mode = 2
+text = "Play"
+
+[node name="Credits" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1468239340]
+layout_mode = 2
+text = "Credits"
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=270602840]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer2/Label" method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Credits" to="MarginContainer/VBoxContainer2/Label" method="_on_credits_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Exit" to="MarginContainer/VBoxContainer2/Label" method="_on_exit_pressed"]
