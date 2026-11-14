@@ -648,6 +648,7 @@ position = Vector2(580, 458)
 shape = SubResource("RectangleShape2D_vvnd5")
 
 [node name="Area2D" type="Area2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1958105306]
+position = Vector2(-1, -1)
 script = ExtResource("4_j87l1")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2/Area2D" unique_id=992130248]

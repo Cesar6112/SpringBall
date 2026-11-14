@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bly8tlvvayq53"]
+
+[ext_resource type="Texture2D" uid="uid://iohdct4se2ae" path="res://gracias.png" id="1_xlesw"]
+
+[node name="Node2D" type="Node2D" unique_id=1168775046]
+
+[node name="Gracias" type="Sprite2D" parent="." unique_id=1735247925]
+position = Vector2(578, 324.99997)
+scale = Vector2(1.9557197, 2.0164444)
+texture = ExtResource("1_xlesw")

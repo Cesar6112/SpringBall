@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://bghci44fseft8"]
+
+[ext_resource type="PackedScene" uid="uid://c6vs574kbtyon" path="res://level_2.tscn" id="1_pj251"]
+[ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://node_2d.tscn" id="2_u8e2b"]
+[ext_resource type="Script" uid="uid://p7gwk1fsyqtd" path="res://collision_shape_2d_2.gd" id="3_u8e2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25806"]
+size = Vector2(20, 686)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwlx4"]
+size = Vector2(1158, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg2y3"]
+size = Vector2(35, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8efhv"]
+size = Vector2(20, 78)
+
+[node name="Node2D" type="Node2D" unique_id=308906686]
+
+[node name="Level 2" parent="." unique_id=1491818073 instance=ExtResource("1_pj251")]
+position = Vector2(0, 5)
+
+[node name="Node2D" parent="." unique_id=332292609 instance=ExtResource("2_u8e2b")]
+position = Vector2(-560, -34)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1963487891]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=74608435]
+position = Vector2(-10, 329)
+shape = SubResource("RectangleShape2D_25806")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=350584854]
+position = Vector2(584, 673)
+shape = SubResource("RectangleShape2D_bwlx4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1657494410]
+position = Vector2(900, 7)
+shape = SubResource("RectangleShape2D_rg2y3")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CharacterBody2D" unique_id=107073544]
+position = Vector2(789, 8)
+shape = SubResource("RectangleShape2D_8efhv")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D" unique_id=23863235]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/Area2D" unique_id=1788570565]
+position = Vector2(576, -6.5)
+shape = SubResource("RectangleShape2D_bwlx4")
+script = ExtResource("3_u8e2b")
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D/Area2D/CollisionShape2D2" method="_on_area_2d_body_entered"]
