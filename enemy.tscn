@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://bm3pkkowuvywg"]
 
 [ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_7k104"]
+[ext_resource type="Script" uid="uid://dh55p0vhfqch3" path="res://area_2d.gd" id="2_4gyqm"]
 
 [sub_resource type="GDScript" id="GDScript_7k104"]
-script/source = "extends CharacterBody2D
+script/source = "extends Area2D
 
 
 @export var speed: float
@@ -13,53 +14,56 @@ var current_index = 0
 var is_waiting = false
 
 func _physics_process(delta):
-	if is_waiting:
+	if is_waiting or waypoints.is_empty():
 		return
 	
 	var min_distance = 5.0
 	var target_position = waypoints[current_index].global_position
-	var direction = target_position - global_position
-	var distance = direction.length()
-	direction = direction.normalized()
-	velocity = direction * speed
+	var distance = global_position.distance_to(target_position)
 	
 	if distance < min_distance:
 		current_index += 1
-		velocity = Vector2.ZERO
-		$Timer.start()
-		is_waiting = true
 		if current_index >= waypoints.size():
 			current_index = 0
-	
-	move_and_slide()
-
-
+		$Timer.start()
+		is_waiting = true
+	else:
+		global_position = global_position.move_toward(target_position, speed * delta)
 func _on_timer_timeout():
 	is_waiting = false
-	
-	
-	
-	extends 
+
+func _on_body_entered(body: Node2D) -> void:
+	get_tree().reload_current_scene.call_deferred()
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(113, 118)
+[sub_resource type="CircleShape2D" id="CircleShape2D_8w0r3"]
+radius = 38.160843
 
-[node name="enemygo xdd" type="CharacterBody2D" unique_id=1468154598]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(36.5, 37.5)
+
+[node name="enemygo xdd" type="Area2D" unique_id=1188058775]
 script = SubResource("GDScript_7k104")
 speed = 500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=338102852]
+position = Vector2(-0.7979001, 3.0052643)
 rotation = 0.034906585
+scale = Vector2(0.23591378, 0.23421517)
 texture = ExtResource("1_7k104")
 
 [node name="Timer" type="Timer" parent="." unique_id=258419730]
 wait_time = 2.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=632005830]
+script = ExtResource("2_4gyqm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=740069366]
 position = Vector2(0.5, 1)
+shape = SubResource("CircleShape2D_8w0r3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269275649]
+position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_8w0r3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

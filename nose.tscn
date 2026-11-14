@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://tw2560u4rmdr"]
+
+[ext_resource type="PackedScene" uid="uid://cq8oryd20ymwh" path="res://map.tscn" id="1_3tnr1"]
+[ext_resource type="PackedScene" uid="uid://bm3pkkowuvywg" path="res://enemy.tscn" id="2_dcqul"]
+
+[node name="Node2D" unique_id=1775908148 instance=ExtResource("1_3tnr1")]
+
+[node name="TxTilesetGrass" parent="." index="0" unique_id=335779697]
+position = Vector2(577, 317.99997)
+
+[node name="Node2D" parent="." index="1" unique_id=332292609]
+position = Vector2(8, 0)
+
+[node name="waypoints" type="Node2D" parent="." index="2" unique_id=328677950]
+position = Vector2(-428, 699)
+
+[node name="waypoint" type="Marker2D" parent="waypoints" index="0" unique_id=151658107]
+position = Vector2(824, -399)
+
+[node name="waypoint2" type="Marker2D" parent="waypoints" index="1" unique_id=1978318006]
+position = Vector2(826, -296)
+
+[node name="waypoint3" type="Marker2D" parent="waypoints" index="2" unique_id=621811849]
+position = Vector2(908, -246)
+
+[node name="waypoint4" type="Marker2D" parent="waypoints" index="3" unique_id=249519271]
+position = Vector2(1132, -277)
+
+[node name="waypoint5" type="Marker2D" parent="waypoints" index="4" unique_id=995489512]
+position = Vector2(1019, -259)
+
+[node name="waypoint6" type="Marker2D" parent="waypoints" index="5" unique_id=619838998]
+position = Vector2(1224, -328)
+
+[node name="waypoint7" type="Marker2D" parent="waypoints" index="6" unique_id=1249157032]
+position = Vector2(1145, -461)
+
+[node name="waypoint8" type="Marker2D" parent="waypoints" index="7" unique_id=550569816]
+position = Vector2(972, -502)
+
+[node name="enemygo xdd" parent="." index="3" unique_id=1468154598 instance=ExtResource("2_dcqul")]
+position = Vector2(485, 321)
