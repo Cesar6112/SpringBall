@@ -474,7 +474,7 @@ a = Vector2(1, -25)
 b = Vector2(2, 462)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bwlx4"]
-a = Vector2(8, 356)
+a = Vector2(-1, 344)
 b = Vector2(9, -5)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rg2y3"]
@@ -492,25 +492,25 @@ a = Vector2(55, -46)
 b = Vector2(54, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bwlx4"]
-size = Vector2(379, 47)
+size = Vector2(379, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dbpx"]
-size = Vector2(27, 39)
+size = Vector2(26.5, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yk1x8"]
 size = Vector2(47, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg2y3"]
-size = Vector2(285.5, 38)
+size = Vector2(271.25, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8efhv"]
 size = Vector2(141, 45.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oq257"]
-size = Vector2(19, 304)
+size = Vector2(19, 301)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5lyh"]
-size = Vector2(213, 55.5)
+size = Vector2(213, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_usivd"]
 size = Vector2(106.875, 56.875)
@@ -525,10 +525,10 @@ size = Vector2(111.5, 59)
 size = Vector2(25, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knklv"]
-size = Vector2(92, 68)
+size = Vector2(92, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vvnd5"]
-size = Vector2(28, 83)
+size = Vector2(262, 83)
 
 [node name="Level" type="Node2D" unique_id=1176346366]
 
@@ -548,11 +548,11 @@ position = Vector2(35, 233)
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="Tilemaplayers/Node2D" unique_id=429882765]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=455564316]
-position = Vector2(342, 363.375)
+position = Vector2(302, 366)
 shape = SubResource("RectangleShape2D_25806")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1180912748]
-position = Vector2(827.1875, 360.6875)
+position = Vector2(842, 366)
 shape = SubResource("RectangleShape2D_25806")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1827897406]
@@ -561,6 +561,10 @@ shape = SubResource("SegmentShape2D_25806")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=616606400]
 position = Vector2(815, -227)
+shape = SubResource("SegmentShape2D_bwlx4")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2/CollisionShape2D5" unique_id=1609707623]
+position = Vector2(803, -162)
 shape = SubResource("SegmentShape2D_bwlx4")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1587225520]
@@ -580,11 +584,11 @@ position = Vector2(196, -24)
 shape = SubResource("SegmentShape2D_p5lyh")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=2032342638]
-position = Vector2(371.5, 54.5)
+position = Vector2(371.5, 53)
 shape = SubResource("RectangleShape2D_bwlx4")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=84960131]
-position = Vector2(269, 12)
+position = Vector2(268.75, 12)
 shape = SubResource("RectangleShape2D_6dbpx")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1684973683]
@@ -592,7 +596,7 @@ position = Vector2(317, 99)
 shape = SubResource("RectangleShape2D_6dbpx")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=455502736]
-position = Vector2(556, 176)
+position = Vector2(551, 177)
 shape = SubResource("RectangleShape2D_6dbpx")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=2007632738]
@@ -600,7 +604,7 @@ position = Vector2(718, 104)
 shape = SubResource("RectangleShape2D_yk1x8")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1352954645]
-position = Vector2(428.25, 228)
+position = Vector2(425, 236)
 shape = SubResource("RectangleShape2D_rg2y3")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1582097637]
@@ -608,11 +612,11 @@ position = Vector2(322, 142.25)
 shape = SubResource("RectangleShape2D_8efhv")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=447507579]
-position = Vector2(812.5, -28)
+position = Vector2(812.5, -29.5)
 shape = SubResource("RectangleShape2D_oq257")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=985418]
-position = Vector2(364, -38)
+position = Vector2(364, -41)
 shape = SubResource("RectangleShape2D_p5lyh")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=404216002]
@@ -620,7 +624,7 @@ position = Vector2(597, -41)
 shape = SubResource("RectangleShape2D_usivd")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=546487179]
-position = Vector2(517.5, 148.5)
+position = Vector2(510, 156)
 shape = SubResource("RectangleShape2D_1qeqh")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1257749407]
@@ -636,11 +640,11 @@ position = Vector2(717, 18)
 shape = SubResource("RectangleShape2D_od4wk")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1240649847]
-position = Vector2(796, 223)
+position = Vector2(796, 220)
 shape = SubResource("RectangleShape2D_knklv")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=2066133915]
-position = Vector2(637, 34)
+position = Vector2(580, 458)
 shape = SubResource("RectangleShape2D_vvnd5")
 
 [node name="Area2D" type="Area2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1958105306]
@@ -649,5 +653,8 @@ script = ExtResource("4_j87l1")
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2/Area2D" unique_id=992130248]
 position = Vector2(878, -263)
 shape = SubResource("RectangleShape2D_usivd")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Tilemaplayers/Node2D/CharacterBody2D2" unique_id=1455369894]
+position = Vector2(1521, 30)
 
 [connection signal="body_entered" from="Tilemaplayers/Node2D/CharacterBody2D2/Area2D" to="Tilemaplayers/Node2D/CharacterBody2D2/Area2D" method="_on_body_entered"]
