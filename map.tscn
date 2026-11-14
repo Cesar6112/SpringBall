@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://yt7o4xh7tuaq" path="res://TX Tileset Grass.png" id="1_wijl4"]
 [ext_resource type="PackedScene" uid="uid://cmwdw8kgbef6b" path="res://node_2d.tscn" id="2_wijl4"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25806"]
+size = Vector2(1140.1249, 617.5)
+
 [node name="Node2D" type="Node2D" unique_id=1775908148]
 
 [node name="TxTilesetGrass" type="Sprite2D" parent="." unique_id=335779697]
@@ -12,3 +15,25 @@ texture = ExtResource("1_wijl4")
 
 [node name="Node2D" parent="." unique_id=332292609 instance=ExtResource("2_wijl4")]
 position = Vector2(-17, -4)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1875004125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=275901505]
+position = Vector2(1716, 320)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_25806")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1563554971]
+position = Vector2(568, 939)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_25806")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CharacterBody2D" unique_id=636220680]
+position = Vector2(569, -293)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_25806")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CharacterBody2D" unique_id=447174034]
+position = Vector2(-572, 315)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_25806")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bm3pkkowuvywg"]
 
-[ext_resource type="Texture2D" uid="uid://c1tp7pqe622b5" path="res://icon.svg" id="1_7k104"]
+[ext_resource type="Texture2D" uid="uid://bvvthy47thy0f" path="res://pelotita_azul-removebg-preview.png" id="1_7k104"]
 
 [sub_resource type="GDScript" id="GDScript_7k104"]
 script/source = "extends Area2D
@@ -36,23 +36,23 @@ func _on_body_entered(body):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(36.5, 37.5)
+size = Vector2(30.25, 27.75)
 
 [node name="enemygo xdd" type="Area2D" unique_id=1188058775]
 script = SubResource("GDScript_7k104")
 speed = 500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=338102852]
-position = Vector2(-0.7979001, 3.0052643)
+position = Vector2(-3.8146973e-06, 4.000004)
 rotation = 0.034906585
-scale = Vector2(0.23591378, 0.23421517)
+scale = Vector2(0.08835314, 0.086276256)
 texture = ExtResource("1_7k104")
 
 [node name="Timer" type="Timer" parent="." unique_id=258419730]
 wait_time = 2.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269275649]
-position = Vector2(1, 4)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_8w0r3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
