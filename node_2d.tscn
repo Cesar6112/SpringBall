@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://051iva3uqmik" path="res://red-ball-cartoon-vector-removebg-preview.png" id="1_wtcfe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_25806"]
-radius = 21.213203
+radius = 15.508656
 
 [node name="Node2D" type="Node2D" unique_id=332292609]
 
@@ -14,8 +14,8 @@ scale = Vector2(0.9908131, 0.9962967)
 script = ExtResource("1_0e48y")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1347375153]
-position = Vector2(579, 326)
-scale = Vector2(0.111784555, 0.111970805)
+position = Vector2(579.3222, 326.20804)
+scale = Vector2(0.080759145, 0.074468404)
 texture = ExtResource("1_wtcfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=93910997]
