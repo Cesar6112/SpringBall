@@ -21,3 +21,6 @@ texture = ExtResource("1_wtcfe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=93910997]
 position = Vector2(579, 326)
 shape = SubResource("CircleShape2D_25806")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=172865493]
+position = Vector2(578.3129, 326.20804)
