@@ -35,8 +35,9 @@ position = Vector2(260, 32)
 [node name="waypoint8" type="Marker2D" parent="Level/waypoints" unique_id=443804330]
 position = Vector2(431, 18)
 
-[node name="enemygo xdd" parent="Level" unique_id=1468154598 instance=ExtResource("2_iicca")]
+[node name="enemygo xdd" parent="Level" unique_id=1468154598 node_paths=PackedStringArray("waypoints") instance=ExtResource("2_iicca")]
 position = Vector2(727, 477)
+waypoints = [NodePath("../waypoints/waypoint"), NodePath("../waypoints/waypoint2"), NodePath("../waypoints/waypoint3"), NodePath("../waypoints/waypoint4"), NodePath("../waypoints/waypoint5"), NodePath("../waypoints/waypoint6"), NodePath("../waypoints/waypoint7"), NodePath("../waypoints/waypoint8")]
 
 [node name="CharacterBody2D" parent="Level" unique_id=1120732112 instance=ExtResource("3_hbxap")]
 position = Vector2(917, 85)
