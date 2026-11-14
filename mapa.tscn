@@ -1,23 +1,28 @@
 [gd_scene format=3 uid="uid://dtupmjn3h17y6"]
 
-[ext_resource type="PackedScene" uid="uid://duwe2tngv1nck" path="res://character_body_2d.tscn" id="2_70f7c"]
 [ext_resource type="Texture2D" uid="uid://051iva3uqmik" path="res://red-ball-cartoon-vector-removebg-preview.png" id="2_q8ihy"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_70f7c"]
-size = Vector2(1154.5, 228)
+[sub_resource type="GDScript" id="GDScript_25806"]
+script/source = "extends CharacterBody2D
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwlx4"]
+radius = 68.117546
 
 [node name="mapa" type="Node2D" unique_id=1414533759]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1816074327]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=455593578]
+position = Vector2(536, 319)
+script = SubResource("GDScript_25806")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=403384207]
-position = Vector2(578.75, 174)
-shape = SubResource("RectangleShape2D_70f7c")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=773341660]
+position = Vector2(3, 1)
+shape = SubResource("CircleShape2D_bwlx4")
 
-[node name="CharacterBody2D" parent="." unique_id=1468154598 instance=ExtResource("2_70f7c")]
-position = Vector2(581, -31)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D" unique_id=1257718691]
+position = Vector2(1, 0)
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=391516174]
-position = Vector2(573.50006, 171.99997)
-scale = Vector2(8.929687, 1.7656255)
+position = Vector2(536, 317)
+scale = Vector2(0.31992188, 0.3004064)
 texture = ExtResource("2_q8ihy")
