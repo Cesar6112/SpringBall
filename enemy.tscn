@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bm3pkkowuvywg"]
+
+[ext_resource type="Texture2D" uid="uid://bvvthy47thy0f" path="res://pelotita_azul-removebg-preview.png" id="1_7k104"]
+
+[sub_resource type="GDScript" id="GDScript_7k104"]
+script/source = "extends Area2D
+
+
+@export var speed: float
+@export var waypoints: Array[Marker2D]
+
+var current_index = 0
+var is_waiting = false
+
+func _physics_process(delta):
+	if is_waiting or waypoints.is_empty():
+		return
+	
+	var min_distance = 5.0
+	var target_position = waypoints[current_index].global_position
+	var distance = global_position.distance_to(target_position)
+	
+	if distance < min_distance:
+		current_index += 1
+		if current_index >= waypoints.size():
+			current_index = 0
+		$Timer.start()
+		is_waiting = true
+	else:
+		global_position = global_position.move_toward(target_position, speed * delta)
+func _on_timer_timeout():
+	is_waiting = false
+
+func _on_body_entered(body):
+	get_tree().reload_current_scene.call_deferred()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(30.25, 27.75)
+
+[node name="enemygo xdd" type="Area2D" unique_id=1188058775]
+script = SubResource("GDScript_7k104")
+speed = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=338102852]
+position = Vector2(-3.8146973e-06, 4.000004)
+rotation = 0.034906585
+scale = Vector2(0.08835314, 0.086276256)
+texture = ExtResource("1_7k104")
+
+[node name="Timer" type="Timer" parent="." unique_id=258419730]
+wait_time = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269275649]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_8w0r3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

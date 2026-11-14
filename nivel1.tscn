@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://3m57jsig7bxt"]
+
+[ext_resource type="PackedScene" uid="uid://cnw0wkvnd5etf" path="res://nivel.tscn" id="1_dbkrs"]
+[ext_resource type="PackedScene" uid="uid://bm3pkkowuvywg" path="res://enemy.tscn" id="2_iicca"]
+
+[node name="Node2D" type="Node2D" unique_id=657078144]
+
+[node name="Level" parent="." unique_id=1176346366 instance=ExtResource("1_dbkrs")]
+
+[node name="waypoints" type="Node2D" parent="Level" unique_id=674191048]
+position = Vector2(32, 393)
+
+[node name="waypoint" type="Marker2D" parent="Level/waypoints" unique_id=1147332303]
+position = Vector2(436, -54)
+
+[node name="waypoint2" type="Marker2D" parent="Level/waypoints" unique_id=504229586]
+position = Vector2(598, -51)
+
+[node name="waypoint3" type="Marker2D" parent="Level/waypoints" unique_id=347087397]
+position = Vector2(605, 55)
+
+[node name="waypoint4" type="Marker2D" parent="Level/waypoints" unique_id=1262988338]
+position = Vector2(693, 87)
+
+[node name="waypoint5" type="Marker2D" parent="Level/waypoints" unique_id=1430861964]
+position = Vector2(614, 118)
+
+[node name="waypoint6" type="Marker2D" parent="Level/waypoints" unique_id=653113782]
+position = Vector2(260, 118)
+
+[node name="waypoint7" type="Marker2D" parent="Level/waypoints" unique_id=1254100968]
+position = Vector2(260, 32)
+
+[node name="waypoint8" type="Marker2D" parent="Level/waypoints" unique_id=443804330]
+position = Vector2(431, 18)
+
+[node name="enemygo xdd" parent="Level" unique_id=1468154598 node_paths=PackedStringArray("waypoints") instance=ExtResource("2_iicca")]
+position = Vector2(468, 334)
+speed = 100.0
+waypoints = [NodePath("../waypoints/waypoint"), NodePath("../waypoints/waypoint2"), NodePath("../waypoints/waypoint3"), NodePath("../waypoints/waypoint4"), NodePath("../waypoints/waypoint5"), NodePath("../waypoints/waypoint6"), NodePath("../waypoints/waypoint7"), NodePath("../waypoints/waypoint8")]
