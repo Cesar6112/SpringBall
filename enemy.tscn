@@ -36,6 +36,10 @@ func _physics_process(delta):
 
 func _on_timer_timeout():
 	is_waiting = false
+	
+	
+	
+	extends 
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
@@ -43,16 +47,19 @@ size = Vector2(113, 118)
 
 [node name="enemygo xdd" type="CharacterBody2D" unique_id=1468154598]
 script = SubResource("GDScript_7k104")
+speed = 500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=338102852]
 rotation = 0.034906585
 texture = ExtResource("1_7k104")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=740069366]
-position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_8w0r3")
-
 [node name="Timer" type="Timer" parent="." unique_id=258419730]
 wait_time = 2.0
+
+[node name="Area2D" type="Area2D" parent="." unique_id=632005830]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=740069366]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_8w0r3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
